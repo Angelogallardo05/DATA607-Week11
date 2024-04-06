@@ -1,0 +1,47 @@
+---
+title: "Recommender Systems Discussion"
+author: "angel"
+date: "2024-04-06"
+output: html_document
+---
+
+**1.Your task is to analyze an existing recommender system that you find interesting.  You should:**
+**Perform a Scenario Design analysis as described below.  Consider whether it makes sense for your selected recommender system to perform scenario design twice, once for the organization (e.g. Amazon.com) and once for the organization's customers.**
+
+**Target user:**
+
+#According to Airbnb, its services offer "unique stays and experiences that make it possible for guests to connect with communities in a more authentic way". Additionally, a Statista report shows that over 50% of the target audience are millennials from the United States and Europe.
+
+#For Airbnb and its hosts, the target users are the guests since the goal is to increase market share in hospitality.
+
+**Key Goal:**
+
+#The key goal for guests is to efficiently book a stay that meets all of their needs, while the key goal for Airbnb and its hosts is to increase bookings and profits.
+
+**Help accomplish goals:**
+
+#According to "Airbnb recommendation system using Aspect-based sentiment analysis: hybrid approach", e-WOM or electronic word of mouth has become a substantial factor in how guests choose their bookings. Therefore, it would be beneficial for Airbnb to increase interactions with guests before and after each booking. As reviews increase, Airbnb can zero in on customer similarities, and recommendations can improve.
+
+**2.Attempt to reverse engineer what you can about the site, from the site interface and any available information that you can **find on the Internet or elsewhere.**
+
+#Airbnb uses a user content-based model. This model is employed when there is significant stay and review data from a guest. Corpus data from reviews or descriptions of previous stays allows the company to do much more than sentiment analysis, according to Manav Mishra[3]. For example, by using the Term-Frequency*Inverse-Document Frequency methodology, the relevance of keywords is calculated based on their frequency in a document as a ratio of total terms in a document multiplied by the logarithm of total documents divided by the number of documents in which the term appears[3]. This vector is then used to calculate its correlation with stays of similar scores. However, Manav points out that this method would not be effective with new customers who have zero reviews.
+
+![Alt Text](/Users/angelgallardo/Desktop/collaborative.png)
+
+#Airbnb also utilizes collaborative filtering models, in which guest reviews are used as a corpus to analyze and assign weights to keywords. These weights are measured based on the most common important factors of the listing. Recommendations are then given to guests who have similar preferences as a listing. Additionally, this method could be used with new users because recommendations are given based on guest filters.
+
+
+
+
+
+**3.Include specific recommendations about how to improve the site’s recommendation capabilities going forward.**
+
+#One thing Airbnb can add to improve the site is to include local activities available in the area. This is important because typical guests choose Airbnb over a hotel mainly to connect with the local community. Additionally, Airbnb can promote local businesses or attractions near the listing to expand interest for the guest.
+
+Finally, I noticed that you are only given a set of filters when searching on Airbnb. It would probably be more logical if a customer were able to type keywords in addition to the set of filters. This way, Airbnb has additional information to utilize in the collaborative filtering model. The model could generate precise recommendations tailored to a guest's unique needs.
+
+
+**Resources**
+#1. https://news.airbnb.com/about-us/
+#2. https://www.statista.com/statistics/796646/airbnb-users-by-age-us-europe/
+#3. https://arno.uvt.nl/show.cgi?fid=161302
